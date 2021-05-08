@@ -1,7 +1,7 @@
 %% Calculation of the LQR gain matrix [K] for the Altitude
 % First define gravity and mass
-g = 9.82;
-m = 67; %grams
+g = 9.81;
+m = 0.063; %grams
 % Simplified system model
 % m*zDotDot = -m*g + F
 
@@ -23,10 +23,17 @@ D = 0;
 sys = ss(A,B,C,D);
 
 % Define Q and R tuning matrices
-Q = [0.01 0; 0 0.01];
-R = 10;  % For this size system R can only be of dimensions 1x1 -scalar
+Q = [   1/10^2 0;
+        0 1/12^2    ];
+    % Q_ii = maximum acceptable value of x_i^2
+% For this size system R can only be of dimensions 1x1 -scalar
+R = 1/(4*Controller.totalThrustMaxRelative*Controller.motorsThrustPerMotorMax)^2;
+    % R_ii = maximum acceptable value of u_i^2
+
 % Calculate the LQR gain K
 [KLQR S CLP] = lqr(sys, Q, R, 0);
+
+%KLQR = [0.8 0.3];
 
 % u = -Kx
 % delta_u(t) = -K*delta_x(t)
