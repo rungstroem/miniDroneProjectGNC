@@ -34,7 +34,7 @@ R = 1/(4*Controller.totalThrustMaxRelative*Controller.motorsThrustPerMotorMax)^2
 [KLQR S CLP] = lqr(sys, Q, R, 0);
 
 %KLQR = [0.8 0.3];
-
+mmlk = 1;
 % u = -Kx
 % delta_u(t) = -K*delta_x(t)
 % u(t) = -K*delta_x(t) + u^*
