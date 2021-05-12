@@ -74,7 +74,7 @@ visualizationFlightGearVars;
 % Simulation Settings
 takeOffDuration = 1;
 enableLanding = true;
-landingAltitude = -0.6;
+landingAltitude = +0.6;
 
 %% Custom Variables
 % Add your variables here:
