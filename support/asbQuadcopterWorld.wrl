@@ -70,7 +70,7 @@ DEF OnQuadNoRotation Viewpoint {
 Fog {
 }
 DEF LandingMarker_Vision Transform {
-  translation 57 -0.05 95
+  translation 57.2 -0.05 95.2
   children Shape {
     appearance Appearance {
       material Material {
@@ -78,7 +78,7 @@ DEF LandingMarker_Vision Transform {
       }
     }
     geometry Box {
-      size 0.4 0.02 0.4
+      size 0.18 0.02 0.18
     }
   }
 }
@@ -105,7 +105,7 @@ DEF LandingMarkerMyTest Transform {
         url "C:/Users/John/MATLAB/Projects/examples/asbQuadcopter/MyAdditions/Markers/marker.jpg" 
       }
       material Material {
-        diffuseColor 1 0 0
+        diffuseColor 0 0 1
       }
     }
     geometry Box {
