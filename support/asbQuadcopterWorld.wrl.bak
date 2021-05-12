@@ -70,7 +70,7 @@ DEF OnQuadNoRotation Viewpoint {
 Fog {
 }
 DEF LandingMarker_Vision Transform {
-  translation 57 -0.05 95
+  translation 57 -0.02 95
   children Shape {
     appearance Appearance {
       material Material {
@@ -78,7 +78,7 @@ DEF LandingMarker_Vision Transform {
       }
     }
     geometry Box {
-      size 0.4 0.02 0.4
+      size 0.2 0.01 0.2
     }
   }
 }
