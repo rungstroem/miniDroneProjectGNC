@@ -23,8 +23,8 @@ D = 0;
 sys = ss(A,B,C,D);
 
 % Define Q and R tuning matrices
-Q = [   1/10^2 0;
-        0 1/12^2    ];
+Q = [   1/10 0;
+        0 1/12    ];
     % Q_ii = maximum acceptable value of x_i^2
 % For this size system R can only be of dimensions 1x1 -scalar
 R = 1/(4*Controller.totalThrustMaxRelative*Controller.motorsThrustPerMotorMax)^2;
@@ -34,7 +34,6 @@ R = 1/(4*Controller.totalThrustMaxRelative*Controller.motorsThrustPerMotorMax)^2
 [KLQR S CLP] = lqr(sys, Q, R, 0);
 
 %KLQR = [0.8 0.3];
-mmlk = 1;
 % u = -Kx
 % delta_u(t) = -K*delta_x(t)
 % u(t) = -K*delta_x(t) + u^*
